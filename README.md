@@ -14,7 +14,7 @@ Voltage (CCCV) charge discharge cycle at a c-rate of C/10.
 
 The project is divided into the following files:
 
-user_input_functions.py: Contains functions that prompts the user to input the following information about the sampple:
+#user_input_functions.py: Contains functions that prompts the user to input the following information about the sampple:
                         - Sample ID
                         - Number of coin cells per sample ID
                         - Mass of the Cathode active material in each coin cell 
