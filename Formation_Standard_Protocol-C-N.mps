@@ -6,7 +6,7 @@ BT-LAB for windows v1.74 (software)
 Internet server v1.74 (firmware)
 Command interpretor v1.74 (firmware)
 
-Filename : C:\Users\QC-Cycler\Documents\QC\Formation_Standard_Protocol-C-N.mps
+Filename : C:\YourPathTotheProtocolFile\Formation_Standard_Protocol-C-N.mps
 
 Device : BCS-810
 Ecell ctrl range : min = 0,00 V, max = 10,00 V
