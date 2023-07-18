@@ -27,7 +27,7 @@ file_generator.py: Contains the create_schedule_files function that creates and 
 
 main.py: Calls all the functions and sets up the logging configuration.
 
-**Example:**
+# **Example:**
 5 coin cells are tested for the sample 'cam-active-material-14585'. 
 The user will be prompted to enter the following info:
 -sample ID: cam-active-material-14585
