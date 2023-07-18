@@ -10,7 +10,8 @@ import sys
 
 def create_schedule_files(config_data):
     """
-        Generates schedule files based on user input and configuration data.
+        Generates Biologic schedule files based on user input and configuration data
+        stored in a configuration file.
 
         This function prompts the user for sample information, then generates schedule files
         based on the user's input and the configuration data.
