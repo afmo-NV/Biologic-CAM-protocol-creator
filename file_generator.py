@@ -8,7 +8,7 @@ import logging
 import sys
 
 
-def create_schedule_files(config_data):
+def create_formation_schedule_files(config_data):
     """
         Generates Biologic schedule files based on user input and configuration data
         stored in a configuration file.
