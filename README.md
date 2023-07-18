@@ -14,16 +14,19 @@ Voltage (CCCV) charge discharge cycle at a c-rate of C/10.
 
 The project is divided into the following files:
 
-#user_input_functions.py: Contains functions that prompts the user to input the following information about the sampple:
+user_input_functions.py: Contains functions that prompts the user to input the following information about the sampple:
                         - Sample ID
                         - Number of coin cells per sample ID
                         - Mass of the Cathode active material in each coin cell 
                         - Specific capacity of the sample
+                        
 
 config_loader.py: Contains the function load_config that loads the information contained in a yaml configuration file.
 
+
 file_generator.py: Contains the create_schedule_files function that creates and exports the protocol files based on the information
                   saved in the configuration file.
+
 
 main.py: Calls all the functions and sets up the logging configuration.
 
