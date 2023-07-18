@@ -30,7 +30,7 @@ logging.getLogger('').addHandler(console_handler)
 
 
 # Directory where the configuration file is located
-base_directory = r'C:\Users\AndresMolinaOsorio\PycharmProjects\045_Biologic_Schedule_Creator'
+base_directory = r'C:\YourPathToTheConfigurationFile'
 
 #Load the configuration file
 config_data = load_config(base_directory,'config.yaml')
