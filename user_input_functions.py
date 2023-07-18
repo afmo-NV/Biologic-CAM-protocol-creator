@@ -13,6 +13,7 @@ def get_sample_id():
 def get_integer_input(prompt_message):
     """
     Prompts the user to input an integer, repeating until a valid integer is entered.
+    This function is used in get_coin_cell_number
     :param prompt_message: string, the message displayed to the user when prompting for input.
     :return: integer, the user input.
     """
