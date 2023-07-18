@@ -7,7 +7,8 @@ import logging
 
 def load_config(config_directory, config_filename):
     """
-        Loads the configuration file and returns the configuration values.
+        Loads the configuration file and returns all the values in
+        that file.
 
         Parameters:
         config_directory : str
