@@ -81,3 +81,16 @@ def get_specific_capacity():
     """
     return get_integer_input(
         "Enter the specific capacity of the sample in mA.h/g (Ni83:200, Ni88:205, Ni90 or higher:210): ")
+
+def get_cycling_protocol():
+    """
+    Prompts the user to enter the cycling protocolm for the sample.
+    :return: str, the protocol for the sample.
+    """
+    while True:
+        protocol = input("Enter cycling protocol F(Formation), FC(Formation and Capacity Check),"
+                         "or CL(Cycle life):")
+        if protocol in ['F', 'FC', 'CL']:
+            return protocol
+        else:
+            print("Invalid input. Please enter F, FC, or CL.")
