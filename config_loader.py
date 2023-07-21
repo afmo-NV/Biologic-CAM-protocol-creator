@@ -5,7 +5,8 @@ import os
 import yaml
 import logging
 
-def load_config(config_directory, config_filename):
+
+def load_config(config_directory, config_filename, protocol_type):
     """
         Loads the configuration file and returns all the values in
         that file.
@@ -39,7 +40,17 @@ def load_config(config_directory, config_filename):
 
     path_MPS_Template = doc['path_MPS_Template']
     path_MPS_Biologic = doc['path_MPS_Biologic']
-    file_MPS = 'Formation_Standard_Protocol-C-N.mps'
+
+    # Ask user the type of test they want to perform
+    # Options: F(Formation), FC(Formation and Capacity Check)
+    #          or CL(Cycle life)
+
+    if protocol_type == 'F':
+        file_MPS = 'Formation_Standard_Protocol-C-N.mps'
+    elif protocol_type == 'FC':
+        file_MPS = 'Formation-Cap-Check-Protocol-Template-C-N.mps'
+    elif protocol_type == 'CL':
+        file_MPS = 'Cycle_Life_Standard_Protocol-Template-C-N.mps'
 
     ##################################################
     ##################################################
