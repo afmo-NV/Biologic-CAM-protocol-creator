@@ -29,11 +29,11 @@ def create_formation_schedule_files(config_data):
     spec_capacity = get_specific_capacity()
 
     # Create directory for files
-    sample_directory = os.path.join(config_data['path_MPS_Biologic'], sample_ID)
+    sample_directory = os.path.join(config_data['path_MPS_Biologic'], sample_ID + '-Protocols')
 
     if os.path.exists(sample_directory):
         overwrite = input(
-            f"The folder for {sample_ID} already exists. Do you want to overwrite existing files? (Y/N): ")
+            f"The folder for {sample_ID} protocols already exists. Do you want to overwrite existing files? (Y/N):")
         if overwrite.lower() != 'y':
             logging.error("Change the sample ID name and try again. Exiting the program.")
             input("Press Enter to exit.")
@@ -57,13 +57,14 @@ def create_formation_schedule_files(config_data):
             filedata = filedata.replace(config_data['current_limit_cp_step_template'],
                                         f'Im                  0,000               {current_limit}             0,000')
 
-        with open(os.path.join(sample_directory, f'Formation-Protocol_{sample_ID}_{cc_name[i]}.mps'), 'w') as file:
+        #with open(os.path.join(sample_directory, f'Formation-Protocol_{sample_ID}_{cc_name[i]}.mps'), 'w') as file:
+        with open(os.path.join(sample_directory, f'Cycle-Life-Protocol_{cc_name[i]}.mps'), 'w') as file:
             file.write(filedata)
 
-        filenames.append(f"{cc_name[i]}_{mass_electrodes[i]}_Mass")
+        filenames.append(f"{cc_name[i]}-Formation_{mass_electrodes[i]}_Mass")
 
     # Save filenames
-    with open(os.path.join(sample_directory, f'{sample_ID}-Filenames.txt'), 'w') as f:
+    with open(os.path.join(sample_directory, f'{sample_ID}-Formation-Filenames.txt'), 'w') as f:
         for item in filenames:
             f.write(f"{item}\n")
 
@@ -96,11 +97,11 @@ def create_cycle_life_schedule_files(config_data):
     spec_capacity = get_specific_capacity()
 
     # Create directory for files
-    sample_directory = os.path.join(config_data['path_MPS_Biologic'], sample_ID)
+    sample_directory = os.path.join(config_data['path_MPS_Biologic'], sample_ID + '-Protocols')
 
     if os.path.exists(sample_directory):
         overwrite = input(
-            f"The folder for {sample_ID} already exists. Do you want to overwrite existing files? (Y/N): ")
+            f" The folder for {sample_ID} protocols already exists. Do you want to overwrite existing files? (Y/N):")
         if overwrite.lower() != 'y':
             logging.error("Change the sample ID name and try again. Exiting the program.")
             input("Press Enter to exit.")
@@ -124,13 +125,14 @@ def create_cycle_life_schedule_files(config_data):
             filedata = filedata.replace(config_data['current_limit_cp_step_template'],
                                         f'Im                  0,000               {current_limit}             0,000')
 
-        with open(os.path.join(sample_directory, f'Formation-Protocol_{sample_ID}_{cc_name[i]}.mps'), 'w') as file:
+        #with open(os.path.join(sample_directory, f'Cycle-Life-Protocol_{sample_ID}_{cc_name[i]}.mps'), 'w') as file:
+        with open(os.path.join(sample_directory, f'Cycle-Life-Protocol_{cc_name[i]}.mps'), 'w') as file:
             file.write(filedata)
 
-        filenames.append(f"{cc_name[i]}_{mass_electrodes[i]}_Mass")
+        filenames.append(f"{cc_name[i]}-Cycle-Life_{mass_electrodes[i]}_Mass")
 
     # Save filenames
-    with open(os.path.join(sample_directory, f'{sample_ID}-Filenames.txt'), 'w') as f:
+    with open(os.path.join(sample_directory, f'{sample_ID}-Cycle-Life-Filenames.txt'), 'w') as f:
         for item in filenames:
             f.write(f"{item}\n")
 
