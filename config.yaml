@@ -1,0 +1,26 @@
+#
+# Config -----------------------------------------------------------------------
+#
+
+# Path to the folder that contains the protocol template file 'path_MPS_Template'
+# This path is used by load_config function in config_loader.py file
+
+path_MPS_Template: '/Users/andresmolina/Documents/Python_Projects/06_CAM_Biologic_Protocol_Creator/data'
+
+# Path where the created protocol files will be exported 'path_MPS_Biologic'
+# This path is used by create_schedule_files function in file_generator.py file
+
+path_MPS_Biologic: '/Users/andresmolina/Documents/Python_Projects/06_CAM_Biologic_Protocol_Creator/exported'
+
+# Lines in the mps template file that will be replaced with sample info
+# from the user
+
+mass_electrode_template : 'Mass of active material : 7000,000 mg'
+capacity_cell_template : 'Battery capacity : 0,000 A.h'
+current_limit_cp_step_template : 'Im                  0,000               150,000             0,000'
+
+# Minimum and maximum value for the active material weight in an electrode in grams
+# These values are used to avoid typos from the user when entering the mass of the active material
+# Current values are set according to CAM-QC but can be modified to any value. 
+cam_min_value: '0.0140'
+cam_max_value: '0.0155'
