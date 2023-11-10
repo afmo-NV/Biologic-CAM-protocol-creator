@@ -2,16 +2,6 @@
 # Config -----------------------------------------------------------------------
 #
 
-# Path to the folder that contains the protocol template file 'path_MPS_Template'
-# This path is used by load_config function in config_loader.py file
-
-path_MPS_Template: '/Users/andresmolina/Documents/Python_Projects/06_CAM_Biologic_Protocol_Creator/data'
-
-# Path where the created protocol files will be exported 'path_MPS_Biologic'
-# This path is used by create_schedule_files function in file_generator.py file
-
-path_MPS_Biologic: '/Users/andresmolina/Documents/Python_Projects/06_CAM_Biologic_Protocol_Creator/exported'
-
 # Lines in the mps template file that will be replaced with sample info
 # from the user
 
