@@ -25,7 +25,8 @@ def load_path_config(config_directory, directory_config_filename):
         doc = yaml.load(file, Loader=yaml.FullLoader)
 
     path_Coin_Cell_Records_File = doc['path_Coin_Cell_Records_File']
-    cc_records_filename = doc['cc_records_filename']
+    cc_records_filename = doc['cc_records_filename']  # Name of the Excel file
+    cc_records_sheet_name = doc['cc_records_sheet_name']  # Name of the sheet in the Excel file
     path_MPS_Template = doc['path_MPS_Template']
     path_MPS_Biologic = doc['path_MPS_Biologic']
 
@@ -37,4 +38,5 @@ def load_path_config(config_directory, directory_config_filename):
         "path_MPS_Biologic": path_MPS_Biologic,
         "path_Coin_Cell_Records_File": path_Coin_Cell_Records_File,
         "cc_records_filename": cc_records_filename,
+        "cc_records_sheet_name": cc_records_sheet_name,
     }
